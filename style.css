@@ -375,33 +375,75 @@ padding:20px;
 
 
 /* CLIENT */
-
-
-.client-container{
-
-display:grid;
-
-grid-template-columns:repeat(4,1fr);
-
-gap:20px;
-
+/* Our Client Section */
+.our-client {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
 }
 
-
-
-.client-card{
-
-padding:30px;
-
-text-align:center;
-
+.our-client h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #1a1a1a;
 }
 
+.client-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
+.client-card {
+    background: #ffffff;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+    min-height: 100px;
+}
 
+.client-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
 
+.client-card img {
+    max-width: 150px;
+    max-height: 55px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
 
+.client-card:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
 
+/* Responsive */
+@media (max-width: 768px) {
+    .client-container {
+        gap: 16px;
+    }
+    .client-card {
+        min-width: 140px;
+        padding: 16px 20px;
+    }
+    .client-card img {
+        max-width: 120px;
+        max-height: 45px;
+    }
+}
 /* ADVANTAGE */
 
 
